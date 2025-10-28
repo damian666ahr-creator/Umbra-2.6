@@ -1,11 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Umbra 2.6</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tienda de Libros</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Bienvenido a Umbra 2.6</h1>
-  <p>Esta es una página básica creada por Damian desde Duitama.</p>
+  <nav class="menu-lateral">
+    <ul>
+      <li><a href="#destacado">Próximamente</a></li>
+      <li><a href="#catalogo">Catálogo</a></li>
+      <li><a href="#categorias">Categorías</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+    <!-- 🎵 Reproductor de Música -->
+    <div class="reproductor-musica">
+      <audio id="audioMenu" preload="auto"></audio>
+      <div class="controles-musica">
+        <button onclick="anteriorCancion()" aria-label="Anterior">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M11 17V7L4 12L11 17Z" fill="#f0e6ff"/>
+            <rect x="13" y="7" width="2" height="10" fill="#f0e6ff"/>
+          </svg>
+        </button>
+        <button onclick="toggleMusica()" id="botonMusica" aria-label="Reproducir/Pausar">
+          <svg id="iconPlay" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M8 5V19L19 12L8 5Z" fill="#f0e6ff"/>
+          </svg>
+        </button>
+        <button onclick="siguienteCancion()" aria-label="Siguiente">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M13 7V17L20 12L13 7Z" fill="#f0e6ff"/>
+            <rect x="9" y="7" width="2" height="10" fill="#f0e6ff"/>
+          </svg>
+        </button>
+      </div>
+      <div class="nombre-cancion" id="nombreCancion">Cargando canción...</div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="encabezado-contenido">
+      <h1>Tienda de Libros</h1>
+      <p class="bienvenida">Bienvenido a tu librería online favorita 📚</p>
+      <input type="text" id="buscador" placeholder="Buscar libros..." />
+    </div>
+  </header>
+
+  <section id="destacado" class="destacado">
+    <h2>Próximamente</h2>
+    <div class="libros-container">
+      <img src="img/WhatsApp Image 2025-09-29 at 1.20.01 AM.jpeg" alt="Próximo lanzamiento" class="imagen-proximamente" />
+    </div>
+  </section>
+
+  <section id="catalogo" class="catalogo">
+    <h2>Catálogo</h2>
+    <div class="libros-container" id="libros"></div>
+  </section>
+
+  <section id="categorias" class="categorias">
+    <h2>Categorías</h2>
+    <ul>
+      <li><a href="#">Existencialismo</a></li>
+      <li><a href="#">Experimental</a></li>
+      <li><a href="#">Historia</a></li>
+    </ul>
+  </section>
+
+  <section class="sobre-nosotros">
+    <div class="sobre-fondo">
+      <h2>Sobre mí</h2>
+      <p>Escribo porque no sé hacer otra cosa cuando el alma se desborda...
+      Esta librería digital es mi refugio. Un rincón donde las palabras tienen peso, donde los libros no solo se venden, sino que se comparten como fragmentos de vida.</p>
+    </div>
+  </section>
+
+ <section id="contacto" class="contacto">
+  <h2>Tu voz importa</h2>
+  <p class="mensaje-invitacion">Este rincón es tuyo. Si algo vibra en tu interior, déjalo fluir aquí.</p>
+  <form>
+    <textarea placeholder="Escribe lo que quieras compartir..." required></textarea>
+    <button type="submit">Susurrar</button>
+  </form>
+</section>
+
+
+
+  <footer>
+    <p>&copy; 2025 Tienda de Libros</p>
+    <div class="redes">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">X (Twitter)</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
