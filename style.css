@@ -1,1 +1,489 @@
+/* Fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000000; /* FONDO SUPER NEGRO */
+  color: #f0e6ff;
+  margin-left: 180px;
+}
+
+/* Menú lateral con fondo de escritura */
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 100%;
+  background-image: url('https://images.pexels.com/photos/256453/pexels-photo-256453.jpeg');
+  background-size: cover;
+  background-position: center;
+  padding-top: 100px;
+  z-index: 1000;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+}
+
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-lateral li {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.menu-lateral a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #000;
+  transition: color 0.3s ease;
+}
+
+.menu-lateral a:hover,
+.menu-lateral a:focus {
+  color: #ffcccc;
+  outline: none;
+}
+
+/* Encabezado con fondo de libros */
+header {
+  background-image: url('https://images.pexels.com/photos/19391773/pexels-photo-19391773.jpeg');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.encabezado-contenido {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+  display: inline-block;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.bienvenida {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #d1b3ff;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+/* Buscador */
+#buscador {
+  padding: 10px;
+  width: 60%;
+  max-width: 400px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+/* Secciones generales */
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Libro destacado */  
+.destacado img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(106, 13, 173, 0.6);
+  margin: 20px auto;
+  display: block;
+}
+
+/* Catálogo con fondo de libros */
+.catalogo {
+  background-image: url('https://images.pexels.com/photos/34279229/pexels-photo-34279229.jpeg');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+}
+
+.catalogo h2 {
+  color: #ffffff;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.libros-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.libro {
+  background-color: rgba(42, 42, 42, 0.9);
+  border: 1px solid #6a0dad;
+  border-radius: 10px;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: aparecer 0.5s ease forwards;
+  box-shadow: 0 0 15px rgba(106, 13, 173, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.libro:hover {
+  transform: scale(1.05);
+}
+
+.libro img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.libro h3 {
+  font-size: 1rem;
+  color: #f0e6ff;
+  margin-bottom: 5px;
+}
+
+.libro p {
+  font-size: 0.9rem;
+  color: #d1b3ff;
+  margin-bottom: 10px;
+}
+
+.libro button {
+  background-color: #ffcccc;
+  color: #121212;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 204, 204, 0.3);
+}
+
+.libro button:hover,
+.libro button:focus {
+  background-color: #6a0dad;
+  color: #ffffff;
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* Categorías */
+.categorias ul {
+  list-style: none;
+  padding: 0;
+}
+
+.categorias li {
+  display: inline-block;
+  margin: 10px;
+}
+
+.categorias a {
+  color: #b19cd9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Sobre Nosotros con fondo llamativo */
+.sobre-nosotros {
+  background-image: url('https://images.pexels.com/photos/16593847/pexels-photo-16593847.jpeg');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+}
+
+.sobre-fondo {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* Contacto */
+.contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.contacto input,
+.contacto textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.contacto button {
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  margin-top: 60px;
+  background-image: url('https://wallpapers.com/images/high/black-and-white-book-970-x-647-wallpaper-g99nqjlj8mkm6v42.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 1px 1px 2px #000;
+  padding: 60px 20px 30px;
+  border-top: none;
+}
+
+/* Redes sociales mejoradas */
+.redes {
+  margin-top: 30px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.redes a {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: #f0e6ff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.redes a:hover,
+.redes a:focus {
+  background-color: #ffcccc;
+  color: #121212;
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* Reproductor de música */
+.reproductor-musica {
+  text-align: center;
+  margin: 30px 10px 0;
+  padding: 10px;
+  border: 2px solid #8000ff;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow:
+  box-shadow 0 0 15px rgba(128, 0, 255, 0.3);
+}
+
+#botonMusica {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+#nombreCancion {
+  color: #8000ff;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 15px;
+  padding: 8px 12px;
+  border: 2px solid #8000ff;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  display: inline-block;
+  text-shadow: 1px 1px 2px #000;
+  box-shadow: 0 0 10px rgba(128, 0, 255, 0.3);
+}
+
+/* Controles del reproductor */
+.controles-musica button {
+  background-color: transparent;
+  border: 2px solid #8000ff;
+  border-radius: 50%;
+  padding: 12px;
+  margin: 0 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(128, 0, 255, 0.3);
+}
+
+.controles-musica button:hover,
+.controles-musica button:focus {
+  background-color: rgba(128, 0, 255, 0.1);
+  outline: none;
+}
+
+.controles-musica button svg path,
+.controles-musica button svg rect {
+  fill: #8000ff;
+  transition: fill 0.3s ease;
+}
+
+.controles-musica button:hover svg path,
+.controles-musica button:hover svg rect,
+.controles-musica button:focus svg path,
+.controles-musica button:focus svg rect {
+  fill: #ffcccc;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes aparecer {
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    margin-left: 0;
+  }
+
+  .menu-lateral {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+  }
+
+  .libros-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #buscador {
+    width: 90%;
+  }
+}
+/* CONTACTO - Estilo visual mejorado sin fondo extra */
+.contacto {
+  padding: 60px 20px;
+  text-align: center;
+  color: #f0e6ff;
+}
+
+.contacto h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #ffcccc;
+  text-shadow: 2px 2px 5px #6a0dad;
+  letter-spacing: 1px;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.mensaje-invitacion {
+  font-size: 1.1rem;
+  color: #d1b3ff;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  line-height: 1.6;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.contacto form {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(106, 13, 173, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.contacto textarea {
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  resize: vertical;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f0e6ff;
+}
+
+.contacto button {
+  background: linear-gradient(to right, #8000ff, #ffcccc);
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-size: 1rem;
+}
+
+.contacto button:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .contacto {
+    padding: 40px 15px;
+  }
+
+  .contacto form {
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .contacto h2 {
+    font-size: 1.8rem;
+  }
+
+  .mensaje-invitacion {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .contacto textarea {
+    font-size: 0.95rem;
+  }
+
+  .contacto button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+}
+
 
