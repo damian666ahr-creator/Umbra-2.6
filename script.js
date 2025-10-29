@@ -56,17 +56,17 @@ const libros = [
   {
     titulo: "Vivir para un destino ya escrito",
     precio: 45000,
-    portada: "https://i.postimg.cc/2y0vQ3FN/libro1.jpg"
+    portada: "https://i.postimg.cc/L8QNjFJn/Whats-App-Image-2025-09-29-at-1-20-01-AM.jpg"
   },
   {
     titulo: "Susurros de una muerte inmortal",
     precio: 38000,
-    portada: "https://i.postimg.cc/L8QNjFJn/Whats-App-Image-2025-09-29-at-1-20-01-AM.jpg"
+    portada: "https://i.postimg.cc/W4JC315F/susurros-de-una-muerte-inmortal.jpg"
   },
   {
     titulo: "La libertad del condenado",
     precio: 52000,
-    portada: "https://i.postimg.cc/L8QNjFJn/Whats-App-Image-2025-09-29-at-1-20-01-AM.jpg"
+    portada: "https://i.postimg.cc/dtqbBvVS/la-libertad-del-condenado.jpg"
   }
 ];
 
