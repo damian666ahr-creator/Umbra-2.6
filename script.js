@@ -60,7 +60,7 @@ const libros = [
   {
     titulo: "Susurros de una muerte inmortal",
     precio: 38000,
-    portada: "https://imgur.com/a/9av6m4w"
+    portada: "https://i.postimg.cc/L8QNjFJn/Whats-App-Image-2025-09-29-at-1-20-01-AM.jpg"
   },
   {
     titulo: "La libertad del condenado",
