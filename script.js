@@ -6,10 +6,11 @@ const nombreCancion = document.getElementById("nombreCancion");
 let reproduciendo = false;
 
 const canciones = [
-  { nombre: "Slowdive", ruta: "musica-fondo.mp3.mp3" },
-  { nombre: "Drowning the Light", ruta: "www.joeemilio.co.za - Drowning the Light - The Longing (320 KBps).mp3" },
+  { nombre: "Slowdive", ruta: "musica-fondo.mp3" },
+  { nombre: "Drowning the Light", ruta: "https://www.joeemilio.co.za/music/DrowningTheLight-TheLonging.mp3" },
   { nombre: "Saturnus", ruta: "All Alone.mp3" }
 ];
+
 let indice = 0;
 
 function cargarCancion() {
@@ -55,7 +56,7 @@ const libros = [
   {
     titulo: "Vivir para un destino ya escrito",
     precio: 45000,
-    portada: "img/WhatsApp Image 2025-09-29 at 1.20.01 AM.jpeg"
+    portada: "https://i.postimg.cc/2y0vQ3FN/libro1.jpg"
   },
   {
     titulo: "Susurros de una muerte inmortal",
@@ -65,7 +66,7 @@ const libros = [
   {
     titulo: "La libertad del condenado",
     precio: 52000,
-    portada: "img/portada1.jpg.jpeg"
+    portada: "https://i.postimg.cc/1XzZXbZQ/libro2.jpg"
   }
 ];
 
@@ -91,8 +92,14 @@ function mostrarLibros(filtro = "") {
       const div = document.createElement("div");
       div.className = "libro";
       div.style.animationDelay = `${index * 0.1}s`;
+
+      // 🖼️ Mostrar imagen externa o local
+      const portada = libro.portada.startsWith("http") 
+        ? libro.portada 
+        : `${window.location.origin}/${libro.portada}`;
+
       div.innerHTML = `
-        <img src="${libro.portada}" alt="${libro.titulo}" />
+        <img src="${portada}" alt="${libro.titulo}" />
         <h3>${libro.titulo}</h3>
         <p>$${libro.precio.toLocaleString()} COP</p>
         <button onclick="pagar('${libro.titulo}', ${libro.precio})">Comprar</button>
@@ -108,4 +115,3 @@ buscador.addEventListener("input", e => {
 function pagar(titulo, precio) {
   alert(`Gracias por tu compra de "${titulo}" por $${precio.toLocaleString()} COP. ¡Tu pedido está en camino!`);
 }
-
